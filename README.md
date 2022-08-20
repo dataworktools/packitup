@@ -5,4 +5,6 @@ packitup is a Python package whose primary purpose is to explore how to create a
 ## Installation and updating
 Use the package manager pip to install Toolbox like below. Rerun this command to check for and install updates.
 
+```
 pip install git+https://github.com/devizn-data/packitup
+```
