@@ -15,7 +15,7 @@ setuptools.setup(
     project_urls = {
         "Bug Tracker": "https://github.com/devizn-data/packitup/issues"
     },
-    license='MIT',
+    license='GNU General Public License v3.0',
     packages=['packitup'],
     install_requires=['requests'],
 )
