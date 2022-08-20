@@ -7,7 +7,7 @@ setuptools.setup(
     name='toolbox',
     version='0.0.3',
     author='Felix A. Sanchez',
-    author_email='mike_huls@hotmail.com',
+    author_email='devizn-data@gmail.com',
     description='Testing installation of Package',
     long_description=long_description,
     long_description_content_type="text/markdown",
