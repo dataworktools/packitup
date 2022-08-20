@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='toolbox',
-    version='0.0.3',
+    version='0.0.1',
     author='Felix A. Sanchez',
     author_email='devizn-data@gmail.com',
     description='Testing installation of Package',
