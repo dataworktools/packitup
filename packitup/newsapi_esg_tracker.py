@@ -12,13 +12,12 @@ url = ('https://newsapi.org/v2/everything?'
        'sortBy=relevancy&'
        'apiKey=bcc83430e9964c40ab973b1012bd82cb')
 
-    
 # fetching data in json format
 response = requests.get(url)
 open_ESG_page = response.json()
 
+#Display results from JSON response
 display(open_ESG_page)
-
 
 # getting all articles in a string article
 article = open_ESG_page["articles"]
