@@ -1,5 +1,5 @@
 # importing requests package
-import requests	
+import requests
 import pandas as pd  
 
 #def ESGNews():
@@ -8,7 +8,7 @@ import pandas as pd
 # following query parameters are used
 # source, sortBy and apiKey
 url = ('https://newsapi.org/v2/everything?'
-       'q=ESG&'
+       'q=ESG SEC&'
        'language=en&'
        'from=2022-08-20&'
        'sortBy=relevancy&'
@@ -76,7 +76,7 @@ df3=HTML(df2.to_html(render_links=True, escape=False))
 display(df3)
 
 # Export dataframe to Excel
-df2.to_excel("C:/Users/urbnb/ESG - News API Tracker.xlsx", index=False)
+df2.to_excel("./", index=False) # enter destination file path
 
 # import openpyxl module
 import openpyxl
@@ -84,7 +84,7 @@ from openpyxl.styles import borders
 from openpyxl.styles.borders import Border
 
 # Give the location of the file
-path = "C:/Users/urbnb/ESG - News API Tracker.xlsx"
+path = "./" # enter source file path
  
 wb_obj = openpyxl.load_workbook(path.strip())
 sheet_obj = wb_obj.active
@@ -98,14 +98,22 @@ sheet.column_dimensions['C'].width = 50
 sheet.column_dimensions['D'].width = 20
 sheet.column_dimensions['E'].width = 100
 
+# Save changes to Excel file
 ws.save(path)
 
+# Format column headers
 from openpyxl.styles import PatternFill
-        
+
+wb = wb_obj
+ws = sheet_obj
+
 ws["A1"].fill = PatternFill("solid", start_color="B2B2B2")
 ws["B1"].fill = PatternFill("solid", start_color="B2B2B2")
 ws["C1"].fill = PatternFill("solid", start_color="B2B2B2")
 ws["D1"].fill = PatternFill("solid", start_color="B2B2B2")
 ws["E1"].fill = PatternFill("solid", start_color="B2B2B2")
+ws["F1"].fill = PatternFill("solid", start_color="B2B2B2")
+ws["G1"].fill = PatternFill("solid", start_color="B2B2B2")
 
-ws.save(path)
+# Save changes to Excel file
+wb.save(path)
